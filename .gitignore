@@ -1,0 +1,31 @@
+# Python/Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.bak
+*.swp
+*.swo
+
+# Entorno virtual 
+venv/
+env/
+.env
+
+*.idea
+.cache/
+
+# Archivos de migración de la base de datos de Django
+*/migrations/
+
+# Archivo de base de datos local (normalmente db.sqlite3)
+db.sqlite3
+
+# Archivo de registro de base de datos
+db.log
+
+# Archivos de generación automática de documentación (por ejemplo, Sphinx)
+docs/_build/
