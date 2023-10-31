@@ -6,7 +6,9 @@ from django.db import models
 class Persona(models.Model):
     nombre = models.CharField(max_length=100)
     peso = models.FloatField(help_text="Ingrese el peso en kilogramos")
-    estatura = models.FloatField(help_text="Ingrese la estatura en metros")
+    estatura = models.FloatField(
+        help_text="Ingrese la estatura en metros ejemplo: 1.70"
+    )
 
     def calcular_imc(self):
         imc = self.peso / (self.estatura * self.estatura)

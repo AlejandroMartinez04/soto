@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Persona, Cliente
+from django.core.exceptions import ValidationError
 
 
 class PersonaSerializer(serializers.ModelSerializer):
@@ -16,6 +17,10 @@ class PersonaSerializer(serializers.ModelSerializer):
             data[
                 "mensaje"
             ] = "IMC está por debajo del rango saludable. Consulte a un profesional médico."
+        elif imc > 25.0:
+            data[
+                "mensaje"
+            ] = "IMC está por encima del rango saludable. Consulte a un profesional médico."
         else:
             data["mensaje"] = "IMC dentro del rango saludable."
         return data
