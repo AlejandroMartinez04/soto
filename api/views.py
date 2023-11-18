@@ -7,11 +7,11 @@ from rest_framework.permissions import IsAuthenticated
 
 
 # @authentication_classes([JWTAuthentication])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 class PersonaViewSet(viewsets.ModelViewSet):
     queryset = Persona.objects.all()
     serializer_class = PersonaSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
 # class PersonaList(generics.ListCreateAPIView):
